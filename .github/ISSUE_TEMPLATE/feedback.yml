@@ -1,0 +1,25 @@
+name: Feedback para Seletor
+description: Submeta um feedback positivo ou negativo para um seletor.
+title: "[Feedback] - Identificador: "
+labels:
+  - feedback
+body:
+  - type: input
+    id: seletor_id
+    attributes:
+      label: Identificador do Seletor
+      description: Insira o hash ou ID do seletor relacionado.
+      placeholder: Hash123
+  - type: dropdown
+    id: tipo_feedback
+    attributes:
+      label: Tipo de Feedback
+      options:
+        - Positivo
+        - Negativo
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou Observações
+      description: Inclua informações adicionais ou logs do problema.
+      placeholder: Descreva o que ocorreu...
