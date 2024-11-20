@@ -4,7 +4,7 @@ import json
 seletor_id = sys.argv[1]
 tipo_feedback = sys.argv[2]
 
-with open(f'selectors/{seletor_id}.json', 'r+') as file:
+with open(f'../selectors/{seletor_id}.json', 'r+') as file:
     data = json.load(file)
     if tipo_feedback == "Positivo":
         data['pontuacao'] += 5
