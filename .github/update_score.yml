@@ -1,0 +1,34 @@
+name: Atualizar Pontuação do Seletor
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  atualizar_pontuacao:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Extrair informações do Issue
+        id: issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const tipoFeedback = issue.body.match(/Tipo de Feedback: (.+)/)[1];
+            const seletorId = issue.body.match(/Seletor ID: (.+)/)[1];
+            return { tipoFeedback, seletorId };
+      
+      - name: Atualizar pontuação
+        run: |
+          python update_score.py "${{ steps.issue.outputs.seletorId }}" "${{ steps.issue.outputs.tipoFeedback }}"
+
+      - name: Commit e push das alterações
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add .
+          git commit -m "Atualizando pontuação do seletor ${{ steps.issue.outputs.seletorId }}"
+          git push

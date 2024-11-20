@@ -1,0 +1,9 @@
+{
+    "id": "hash_do_launch_measurement",
+    "hardware_version": "AMD SEV-SNP",
+    "firmware_version": "v1.2.3",
+    "tee_version": "TEE-X",
+    "initial_reliability_score": 75,
+    "history_of_feedback": []
+  }
+  
