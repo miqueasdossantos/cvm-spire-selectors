@@ -30,7 +30,7 @@ jobs:
       
       - name: Atualizar pontuação
         run: |
-          python update_score.py "${{ steps.issue.outputs.seletorId }}" "${{ steps.issue.outputs.tipoFeedback }}"
+          python scripts/update_score.py "${{ steps.issue.outputs.seletorId }}" "${{ steps.issue.outputs.tipoFeedback }}"
 
       - name: Commit e push das alterações
         run: |
