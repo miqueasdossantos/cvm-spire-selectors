@@ -17,8 +17,15 @@ jobs:
         with:
           script: |
             const issue = context.payload.issue;
-            const tipoFeedback = issue.body.match(/Tipo de Feedback: (.+)/)[1];
-            const seletorId = issue.body.match(/Seletor ID: (.+)/)[1];
+            // Extrair o seletor ID
+            const seletorIdMatch = issue.body.match(/Identificador do Seletor\s+(.+)\s*`(.+)`/);
+            const seletorId = seletorIdMatch ? seletorIdMatch[2] : null;
+            
+            // Extrair o tipo de feedback (Positivo ou Negativo)
+            const tipoFeedbackMatch = issue.body.match(/Tipo de Feedback\s+- \[ \] Positivo\s+- \[x\] Negativo/);
+            const tipoFeedback = tipoFeedbackMatch ? 'Negativo' : 'Positivo';
+            
+            // Retornar as variáveis extraídas
             return { tipoFeedback, seletorId };
       
       - name: Atualizar pontuação
