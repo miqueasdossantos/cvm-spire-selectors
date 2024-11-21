@@ -44,8 +44,14 @@ jobs:
 
       - name: Commit e push das alterações
         run: |
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
+          # Configurar usuário para o commit
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Adicionar alterações, commitar e empurrar para o repositório
           git add .
           git commit -m "Atualizando pontuação do seletor ${{ steps.issue.outputs.seletorId }}"
-          git push
+          
+          # Usar o GITHUB_TOKEN para autenticação no push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+
