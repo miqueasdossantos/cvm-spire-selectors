@@ -29,11 +29,9 @@ jobs:
             const tipoFeedbackMatch = issue.body.match(/Tipo de Feedback\s+- \[x\] Negativo/);
             const tipoFeedback = tipoFeedbackMatch ? 'Negativo' : 'Positivo';
             
-            // Definir como saída para ser usado em outros steps
-            return { 
-              tipoFeedback, 
-              seletorId 
-            };
+            // Definir como saída usando set-output para que outros steps possam acessar
+            core.setOutput("seletorId", seletorId);
+            core.setOutput("tipoFeedback", tipoFeedback);
 
       - name: Verificar valores extraídos
         run: |
