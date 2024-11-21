@@ -29,8 +29,11 @@ jobs:
             const tipoFeedbackMatch = issue.body.match(/Tipo de Feedback\s+- \[x\] Negativo/);
             const tipoFeedback = tipoFeedbackMatch ? 'Negativo' : 'Positivo';
             
-            // Retornar as variáveis extraídas
-            return { tipoFeedback, seletorId };
+            // Definir como saída para ser usado em outros steps
+            return { 
+              tipoFeedback, 
+              seletorId 
+            };
 
       - name: Verificar valores extraídos
         run: |
