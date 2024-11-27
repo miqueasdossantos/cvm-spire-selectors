@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletores SPIRE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #007ACC;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #007ACC;
+      color: white;
+    }
+    .container {
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Seletores SPIRE e Pontuações</h1>
+  </header>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID do Seletor</th>
+          <th>Descrição</th>
+          <th>Pontuação</th>
+        </tr>
+      </thead>
+      <tbody id="selector-table">
+        <!-- Dados serão carregados aqui -->
+      </tbody>
+    </table>
+  </div>
+  <script src="data.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tableBody = document.getElementById('selector-table');
+      const selectors = SELECTORS;
+
+      selectors.forEach(selector => {
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+          <td>${selector.id}</td>
+          <td>${selector.description}</td>
+          <td>${selector.score}</td>
+        `;
+
+        tableBody.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>
