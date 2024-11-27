@@ -2,8 +2,8 @@ import os
 import json
 
 # Diretório onde estão os seletores
-SELECTORS_DIR = "../selectors"
-OUTPUT_FILE = "../docs/data.js"
+SELECTORS_DIR = "selectors"
+OUTPUT_FILE = "docs/data.js"
 
 def generate_data_js():
     # Lista para armazenar os dados dos seletores
