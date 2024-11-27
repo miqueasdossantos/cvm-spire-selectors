@@ -43,13 +43,7 @@ jobs:
         run: |
           python scripts/update_score.py "${{ steps.issue.outputs.seletorId }}" "${{ steps.issue.outputs.tipoFeedback }}"
       - name: Gerar data.js
-        run: python generate_data_js.py
-
-      - name: Copiar arquivos para docs/
-        run: |
-          mkdir -p docs
-          cp index.html docs/
-          cp docs/data.js docs/
+        run: python scripts/generate_data_js.py
 
       - name: Commit e push das alterações
         run: |
