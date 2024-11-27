@@ -19,14 +19,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Gerar data.js
-        run: python generate_data_js.py
 
-      - name: Copiar arquivos para docs/
-        run: |
-          mkdir -p docs
-          cp index.html docs/
-          cp docs/data.js docs/
 
       - name: Commit e push das alterações
         run: |
