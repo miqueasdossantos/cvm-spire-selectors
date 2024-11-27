@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions: write-all
 
     steps:
       - name: Checkout do repositório
@@ -18,9 +19,6 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Instalar dependências
-        run: pip install -r requirements.txt || true
-
       - name: Gerar data.js
         run: python generate_data_js.py
 
@@ -30,10 +28,15 @@ jobs:
           cp index.html docs/
           cp docs/data.js docs/
 
-      - name: Commit e push do GitHub Pages
+      - name: Commit e push das alterações
         run: |
+          # Configurar usuário para o commit
           git config user.name "GitHub Actions"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/
-          git commit -m "Atualizando GitHub Pages com dados de seletores"
-          git push
+          
+          # Adicionar alterações, commitar e empurrar para o repositório
+          git add .
+          git commit -m "Atualizando pontuação do seletor ${{ steps.issue.outputs.seletorId }}"
+          
+          # Usar o GITHUB_TOKEN para autenticação no push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
