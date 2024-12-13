@@ -3,6 +3,8 @@
     "hardware_version": "Intel TDX",
     "launch_measurement": "c8a32f47e4b7b9ad302ee9d073c08b57b03273a3d7b2cf542c3df7d56d9135f5",
     "firmware_version": "2.1.0",
-    "score": 95,
-    "feedback": ["Works well with Intel CPUs but struggles with older firmware versions."]
+    "score": 100,
+    "feedback": [
+        "Works well with Intel CPUs but struggles with older firmware versions."
+    ]
 }
