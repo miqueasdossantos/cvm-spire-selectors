@@ -1,0 +1,8 @@
+{
+    "id": "004",
+    "hardware_version": "AMD SEV-SNP",
+    "launch_measurement": "9f4e8c06de4a34c432fa8c11b8ba48ab90821c6cb527b1b350110e8b1a68f4c5",
+    "firmware_version": "1.4.0",
+    "score": 140,
+    "feedback": ["Great for secure virtual machines, especially for sensitive workloads in hybrid cloud setups."]
+}

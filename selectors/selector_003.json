@@ -1,0 +1,8 @@
+{
+    "id": "003",
+    "hardware_version": "Intel TDX",
+    "launch_measurement": "6f1e3c1a6b9b098465a7854d44dffcbde8873b7db2b30de6959be8ec7639a473",
+    "firmware_version": "2.2.1",
+    "score": 120,
+    "feedback": ["Verified to work in most environments, but performance may degrade under high load."]
+}

@@ -1,0 +1,8 @@
+{
+    "id": "007",
+    "hardware_version": "AMD SEV-SNP",
+    "launch_measurement": "2c903ad1d0837a71cc7d6b70c5a95b26ffb1c10b9751043b8321152f853e4b0e",
+    "firmware_version": "1.5.1",
+    "score": 125,
+    "feedback": ["Works well with newer AMD processors, but requires the latest firmware updates."]
+}

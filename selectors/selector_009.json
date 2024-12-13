@@ -1,0 +1,8 @@
+{
+    "id": "009",
+    "hardware_version": "AMD SEV-SNP",
+    "launch_measurement": "ee0fcbf7c4f8f612caedb7c78eebc99e598cf907d10f9f88c8012466d0b9a572",
+    "firmware_version": "1.2.4",
+    "score": 155,
+    "feedback": ["Highly recommended for cloud environments with sensitive workloads, offers excellent isolation."]
+}

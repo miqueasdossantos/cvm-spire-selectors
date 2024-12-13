@@ -1,0 +1,8 @@
+{
+    "id": "008",
+    "hardware_version": "Intel TDX",
+    "launch_measurement": "3ab3b8a34f8b6f019ee4b299321bbff1b67d4faeddefd1b1fef8759d9d5f98c7",
+    "firmware_version": "2.0.0",
+    "score": 130,
+    "feedback": ["Runs smoothly with Intels TDX but may require adjustments for legacy hardware."]
+}
