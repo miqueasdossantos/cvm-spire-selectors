@@ -4,7 +4,7 @@ const SELECTORS = [
     "hardware_version": "AMD SEV-SNP",
     "launch_measurement": "abc123hash",
     "firmware_version": "1.2.3",
-    "score": 130,
+    "score": 135,
     "feedback": []
   },
   {
