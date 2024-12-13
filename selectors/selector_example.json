@@ -1,9 +1,11 @@
 {
-    "id": "hash_do_launch_measurement",
-    "hardware_version": "AMD SEV-SNP",
-    "firmware_version": "v1.2.3",
-    "tee_version": "TEE-X",
-    "initial_reliability_score": 75,
-    "history_of_feedback": []
-  }
-  
+  "id": "hash_do_launch_measurement",
+  "hardware_version": "AMD SEV-SNP",
+  "firmware_version": "v1.2.3",
+  "tee_version": "v1.2.3",
+  "initial_reliability_score": 75,
+  "history_of_feedback": [],
+  "last_updated": "2024-12-01",
+  "use_case_category": "Cloud",
+  "documentation_link": "https://example.com/docs/amd-sev-snp"
+}

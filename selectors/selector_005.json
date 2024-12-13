@@ -1,8 +1,14 @@
 {
-    "id": "005",
-    "hardware_version": "ARM TrustZone",
-    "launch_measurement": "a33b89c5ef0123f5a4e93d7677d7f8c3567a5d364d7e0f9b9c8cd8fca1a9a4e2",
-    "firmware_version": "2.1.0",
-    "score": 110,
-    "feedback": ["Effective for mobile and embedded systems, but lacks support for more complex computing environments."]
+  "id": "005",
+  "hardware_version": "ARM TrustZone",
+  "launch_measurement": "a33b89c5ef0123f5a4e93d7677d7f8c3567a5d364d7e0f9b9c8cd8fca1a9a4e2",
+  "firmware_version": "2.1.0",
+  "score": 110,
+  "feedback": [
+    "Effective for mobile and embedded systems, but lacks support for more complex computing environments."
+  ],
+  "tee_version": "v1.2.3",
+  "last_updated": "2024-12-01",
+  "use_case_category": "Cloud",
+  "documentation_link": "https://example.com/docs/amd-sev-snp"
 }

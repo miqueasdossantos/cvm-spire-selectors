@@ -1,8 +1,14 @@
 {
-    "id": "010",
-    "hardware_version": "Intel TDX",
-    "launch_measurement": "b34b0c9cfdfe9c8d9b12f2d974c9f14292f58b1fdf3465c81cfbdba574f4e9e9",
-    "firmware_version": "2.4.5",
-    "score": 150,
-    "feedback": ["Works efficiently in secure enclave environments, but requires a strong TPM implementation."]
+  "id": "010",
+  "hardware_version": "Intel TDX",
+  "launch_measurement": "b34b0c9cfdfe9c8d9b12f2d974c9f14292f58b1fdf3465c81cfbdba574f4e9e9",
+  "firmware_version": "2.4.5",
+  "score": 150,
+  "feedback": [
+    "Works efficiently in secure enclave environments, but requires a strong TPM implementation."
+  ],
+  "tee_version": "v1.2.3",
+  "last_updated": "2024-12-01",
+  "use_case_category": "Cloud",
+  "documentation_link": "https://example.com/docs/amd-sev-snp"
 }
