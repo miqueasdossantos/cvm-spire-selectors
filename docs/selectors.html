@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletores SPIRE - Resultados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #007ACC;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #007ACC;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Seletores SPIRE - Resultados</h1>
+  </header>
+  <div class="container">
+    <h2>Seletores para: <span id="hardware-title"></span></h2>
+    <table id="selectors-table">
+      <thead>
+        <tr>
+          <th>ID do Seletor</th>
+          <th>Pontuação</th>
+          <th>Feedback</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados serão carregados aqui -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const hardwareVersion = urlParams.get('hardware_version');
+      const hardwareTitle = document.getElementById('hardware-title');
+      hardwareTitle.textContent = hardwareVersion;
+
+      const tableBody = document.getElementById('selectors-table').getElementsByTagName('tbody')[0];
+      const filteredSelectors = SELECTORS.filter(selector => selector.hardware_version === hardwareVersion);
+
+      filteredSelectors.forEach(selector => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${selector.id}</td>
+          <td>${selector.score}</td>
+          <td>${selector.feedback.join(", ")}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>

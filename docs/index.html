@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seletores SPIRE</title>
+  <title>Seletores SPIRE - Página Inicial</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,60 +16,42 @@
       padding: 1rem;
       text-align: center;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
+    .container {
+      padding: 2rem;
       text-align: center;
     }
-    th {
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    button {
       background-color: #007ACC;
       color: white;
-    }
-    .container {
-      padding: 1rem;
+      border: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Seletores SPIRE e Pontuações</h1>
+    <h1>Escolha o Tipo de Hardware</h1>
   </header>
   <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th>ID do Seletor</th>
-          <th>Descrição</th>
-          <th>Pontuação</th>
-        </tr>
-      </thead>
-      <tbody id="selector-table">
-        <!-- Dados serão carregados aqui -->
-      </tbody>
-    </table>
+    <label for="hardware-select">Selecione o hardware:</label>
+    <select id="hardware-select">
+      <option value="Intel TDX">Intel TDX</option>
+      <option value="AMD SEV-SNP">AMD SEV-SNP</option>
+      <option value="ARM TrustZone">ARM TrustZone</option>
+    </select>
+    <br />
+    <button id="go-button">Ver Seletores</button>
   </div>
-  <script src="data.js"></script>
+
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const tableBody = document.getElementById('selector-table');
-      const selectors = SELECTORS;
-
-      selectors.forEach(selector => {
-        const row = document.createElement('tr');
-
-        row.innerHTML = `
-          <td>${selector.id}</td>
-          <td>${selector.description}</td>
-          <td>${selector.score}</td>
-        `;
-
-        tableBody.appendChild(row);
-      });
+    document.getElementById('go-button').addEventListener('click', function() {
+      const hardwareVersion = document.getElementById('hardware-select').value;
+      window.location.href = `selectors.html?hardware_version=${encodeURIComponent(hardwareVersion)}`;
     });
   </script>
 </body>
