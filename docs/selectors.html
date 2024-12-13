@@ -53,6 +53,7 @@
     <h1>Seletores SPIRE - Resultados</h1>
   </header>
   <div class="container">
+    <h2>Seletores para: <span id="hardware-title"></span></h2>
     <div class="filters">
       <label for="score-filter">Filtrar por pontuação:</label>
       <select id="score-filter">
@@ -70,13 +71,19 @@
   <script src="data.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const selectorsContainer = document.getElementById('selectors-container');
-      const scoreFilter = document.getElementById('score-filter');
+      // Captura o parâmetro da URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const hardwareVersion = urlParams.get('hardware_version');  // Pega o valor do hardware_version
+      const hardwareTitle = document.getElementById('hardware-title');
+      hardwareTitle.textContent = hardwareVersion;  // Exibe o nome do hardware na página
+
+      const tableBody = document.getElementById('selectors-container');
+      const filteredSelectors = SELECTORS.filter(selector => selector.hardware_version === hardwareVersion);
 
       // Filtragem por pontuação
       function applyFilter() {
-        const filterValue = scoreFilter.value;
-        const filteredSelectors = SELECTORS.filter(selector => {
+        const filterValue = document.getElementById('score-filter').value;
+        const finalSelectors = filteredSelectors.filter(selector => {
           if (filterValue === 'all') return true;
           if (filterValue === 'high' && selector.score > 130) return true;
           if (filterValue === 'medium' && selector.score > 100) return true;
@@ -84,17 +91,18 @@
         });
 
         // Mostrar os seletores filtrados
-        selectorsContainer.innerHTML = "";
-        filteredSelectors.forEach(selector => {
+        tableBody.innerHTML = "";
+        finalSelectors.forEach(selector => {
           const card = document.createElement('div');
           card.classList.add('card');
           card.innerHTML = `
             <h3>${selector.id} - ${selector.hardware_version}</h3>
             <p><strong>Pontuação:</strong> ${selector.score}</p>
+            <p><strong>Launch Measurement:</strong> ${selector.launch_measurement}</p> <!-- Novo campo -->
             <p><strong>Categoria:</strong> ${selector.use_case_category || 'Não especificada'}</p>
             <p><strong>Feedback:</strong> ${selector.feedback.join(', ')}</p>
           `;
-          selectorsContainer.appendChild(card);
+          tableBody.appendChild(card);
         });
       }
 
