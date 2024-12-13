@@ -1,14 +1,14 @@
 {
-  "id": "001",
-  "hardware_version": "Intel TDX",
-  "launch_measurement": "c8a32f47e4b7b9ad302ee9d073c08b57b03273a3d7b2cf542c3df7d56d9135f5",
-  "firmware_version": "2.1.0",
-  "score": 100,
-  "feedback": [
-    "Works well with Intel CPUs but struggles with older firmware versions."
-  ],
-  "tee_version": "v1.2.3",
-  "last_updated": "2024-12-01",
-  "use_case_category": "Cloud",
-  "documentation_link": "https://example.com/docs/amd-sev-snp"
+    "id": "001",
+    "hardware_version": "Intel TDX",
+    "launch_measurement": "c8a32f47e4b7b9ad302ee9d073c08b57b03273a3d7b2cf542c3df7d56d9135f5",
+    "firmware_version": "2.1.0",
+    "score": 105,
+    "feedback": [
+        "Works well with Intel CPUs but struggles with older firmware versions."
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
 }

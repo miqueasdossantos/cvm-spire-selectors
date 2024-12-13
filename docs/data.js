@@ -7,7 +7,11 @@ const SELECTORS = [
     "score": 125,
     "feedback": [
       "Works well with newer AMD processors, but requires the latest firmware updates."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "005",
@@ -17,7 +21,11 @@ const SELECTORS = [
     "score": 110,
     "feedback": [
       "Effective for mobile and embedded systems, but lacks support for more complex computing environments."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "008",
@@ -27,7 +35,11 @@ const SELECTORS = [
     "score": 130,
     "feedback": [
       "Runs smoothly with Intels TDX but may require adjustments for legacy hardware."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "004",
@@ -37,25 +49,36 @@ const SELECTORS = [
     "score": 140,
     "feedback": [
       "Great for secure virtual machines, especially for sensitive workloads in hybrid cloud setups."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "001",
     "hardware_version": "Intel TDX",
     "launch_measurement": "c8a32f47e4b7b9ad302ee9d073c08b57b03273a3d7b2cf542c3df7d56d9135f5",
     "firmware_version": "2.1.0",
-    "score": 100,
+    "score": 105,
     "feedback": [
       "Works well with Intel CPUs but struggles with older firmware versions."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "hash_do_launch_measurement",
     "hardware_version": "AMD SEV-SNP",
     "firmware_version": "v1.2.3",
-    "tee_version": "TEE-X",
+    "tee_version": "v1.2.3",
     "initial_reliability_score": 75,
-    "history_of_feedback": []
+    "history_of_feedback": [],
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "009",
@@ -65,7 +88,11 @@ const SELECTORS = [
     "score": 155,
     "feedback": [
       "Highly recommended for cloud environments with sensitive workloads, offers excellent isolation."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "002",
@@ -75,7 +102,11 @@ const SELECTORS = [
     "score": 135,
     "feedback": [
       "Stable performance in cloud environments, but requires specific hardware configurations."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "003",
@@ -85,7 +116,11 @@ const SELECTORS = [
     "score": 120,
     "feedback": [
       "Verified to work in most environments, but performance may degrade under high load."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "010",
@@ -95,7 +130,11 @@ const SELECTORS = [
     "score": 150,
     "feedback": [
       "Works efficiently in secure enclave environments, but requires a strong TPM implementation."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   },
   {
     "id": "006",
@@ -105,6 +144,10 @@ const SELECTORS = [
     "score": 120,
     "feedback": [
       "Suitable for secure mobile applications but may face performance issues under heavy load."
-    ]
+    ],
+    "tee_version": "v1.2.3",
+    "last_updated": "2024-12-01",
+    "use_case_category": "Cloud",
+    "documentation_link": "https://example.com/docs/amd-sev-snp"
   }
 ];
