@@ -17,12 +17,7 @@ def generate_data_js():
             # Ler o arquivo JSON
             with open(filepath, "r") as file:
                 selector = json.load(file)
-                # Extrair os dados necessários
-                selectors_data.append({
-                    "id": selector.get("id", filename),  # Usar o filename se "id" não estiver no JSON
-                    "description": selector.get("description", "Sem descrição"),
-                    "score": selector.get("score", 0)  # Pontuação padrão caso não esteja definida
-                })
+                selectors_data.append(selector)  # Adicionar os dados completos do JSON
 
     # Gerar o conteúdo do arquivo `data.js`
     data_js_content = f"const SELECTORS = {json.dumps(selectors_data, indent=2)};"
