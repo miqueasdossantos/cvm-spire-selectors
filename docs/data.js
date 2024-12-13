@@ -1,12 +1,18 @@
 const SELECTORS = [
   {
     "id": "selector123",
-    "description": "Sem descri\u00e7\u00e3o",
-    "score": 125
+    "hardware_version": "AMD SEV-SNP",
+    "launch_measurement": "abc123hash",
+    "firmware_version": "1.2.3",
+    "score": 130,
+    "feedback": []
   },
   {
     "id": "hash_do_launch_measurement",
-    "description": "Sem descri\u00e7\u00e3o",
-    "score": 0
+    "hardware_version": "AMD SEV-SNP",
+    "firmware_version": "v1.2.3",
+    "tee_version": "TEE-X",
+    "initial_reliability_score": 75,
+    "history_of_feedback": []
   }
 ];
